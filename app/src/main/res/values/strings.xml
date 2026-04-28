@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    strings.xml — All user-visible text in the app.
+
+    Why put text here instead of directly in XML/Kotlin?
+    1. Easy to update text in ONE place
+    2. Required for translation (future Hindi support)
+    3. Android Studio warns if you hardcode text
+-->
+<resources>
+
+    <!-- App name — shows in launcher and title bar -->
+    <string name="app_name">Shishu Sneh</string>
+    <string name="app_tagline">Baby\'s First Year Guide</string>
+
+    <!-- ===== ONBOARDING SCREEN ===== -->
+    <string name="onboarding_subtitle">Your baby\'s digital health companion.\nLet\'s begin by knowing your little one.</string>
+    <string name="baby_details_title">Baby Details</string>
+    <string name="baby_details_subtitle">Enter your baby\'s information to get started</string>
+
+    <!-- Input field hints -->
+    <string name="hint_baby_name">Baby\'s Name</string>
+    <string name="hint_dob">Date of Birth</string>
+    <string name="hint_mother_name">Mother\'s Name</string>
+
+    <!-- Gender options -->
+    <string name="label_gender">Gender *</string>
+    <string name="gender_male">Boy</string>
+    <string name="gender_female">Girl</string>
+    <string name="gender_other">Other</string>
+
+    <!-- Buttons -->
+    <string name="button_start_journey">Start Journey</string>
+
+    <!-- DatePicker -->
+    <string name="date_picker_title">Select Baby\'s Date of Birth</string>
+
+    <!-- ===== MESSAGES ===== -->
+    <string name="msg_profile_saved">Welcome to Shishu Sneh! 🍼</string>
+    <string name="msg_enter_name">Please enter baby\'s name</string>
+    <string name="msg_select_dob">Please select date of birth</string>
+    <string name="msg_select_gender">Please select gender</string>
+    <string name="msg_save_failed">Failed to save profile</string>
+
+    <!-- ===== CONTENT DESCRIPTIONS (for accessibility) ===== -->
+    <string name="welcome_icon_desc">Welcome illustration</string>
+
+    <!-- ================================================================ -->
+    <!-- ===== PHASE 2 — DASHBOARD ===== -->
+    <!-- ================================================================ -->
+
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_greeting">%s\'s Dashboard</string>
+    <string name="dashboard_age_format">%d months old</string>
+    <string name="dashboard_age_days_format">%d days old</string>
+    <string name="dashboard_born_on">Born on %s</string>
+
+    <!-- Latest Measurement Card -->
+    <string name="card_latest_measurement">Latest Measurement</string>
+    <string name="label_weight">Weight</string>
+    <string name="label_height">Height</string>
+    <string name="label_head_circ">Head</string>
+    <string name="label_recorded_on">Recorded: %s</string>
+    <string name="label_no_measurements">No measurements yet.\nTap + to add your first one!</string>
+
+    <!-- BMI Card -->
+    <string name="label_bmi">BMI</string>
+    <string name="bmi_format">%.1f</string>
+    <string name="bmi_underweight">Underweight</string>
+    <string name="bmi_normal">Normal</string>
+    <string name="bmi_overweight">Overweight</string>
+
+    <!-- Growth Summary Card -->
+    <string name="card_growth_summary">Growth Summary</string>
+    <string name="summary_weight_change_month">Weight: %s (last month)</string>
+    <string name="summary_height_since_birth">Height: %s (since birth)</string>
+    <string name="summary_weight_since_birth">Weight: %s (since birth)</string>
+    <string name="summary_total_records">%d measurements recorded</string>
+    <string name="summary_last_recorded">Last recorded: %d days ago</string>
+    <string name="summary_last_recorded_today">Last recorded: today</string>
+    <string name="summary_not_enough_data">Add more measurements to see growth trends</string>
+
+    <!-- Growth Chart Card -->
+    <string name="card_growth_trend">Growth Trend</string>
+    <string name="button_view_full_chart">View Full Chart</string>
+
+    <!-- Dashboard Buttons -->
+    <string name="button_view_history">View History</string>
+    <string name="button_export_csv">Export CSV</string>
+
+    <!-- Dashboard Menu -->
+    <string name="menu_toggle_units">Switch to %s</string>
+    <string name="menu_metric">Metric (kg/cm)</string>
+    <string name="menu_imperial">Imperial (lbs/in)</string>
+
+    <!-- ================================================================ -->
+    <!-- ===== PHASE 2 — ADD MEASUREMENT ===== -->
+    <!-- ================================================================ -->
+
+    <string name="add_measurement_title">Add Measurement</string>
+    <string name="add_measurement_subtitle">Record your baby\'s growth</string>
+    <string name="hint_measurement_date">Measurement Date</string>
+    <string name="hint_weight">Weight (%s)</string>
+    <string name="hint_height">Height (%s)</string>
+    <string name="hint_head_circumference">Head Circumference (%s) — Optional</string>
+    <string name="hint_notes">Notes (optional)</string>
+    <string name="button_save_measurement">Save Measurement</string>
+    <string name="date_picker_measurement_title">Select Measurement Date</string>
+
+    <!-- Validation Messages -->
+    <string name="msg_enter_weight">Please enter weight</string>
+    <string name="msg_enter_height">Please enter height</string>
+    <string name="msg_select_date">Please select a measurement date</string>
+    <string name="msg_invalid_weight">Weight must be a positive number</string>
+    <string name="msg_invalid_height">Height must be a positive number</string>
+    <string name="msg_measurement_saved">Measurement saved! 📊</string>
+    <string name="msg_measurement_save_failed">Failed to save measurement</string>
+
+    <!-- ================================================================ -->
+    <!-- ===== PHASE 2 — GROWTH CHART ===== -->
+    <!-- ================================================================ -->
+
+    <string name="growth_chart_title">Growth Chart</string>
+    <string name="chart_tab_weight">Weight</string>
+    <string name="chart_tab_height">Height</string>
+    <string name="chart_tab_both">Both</string>
+    <string name="chart_weight_label">Weight (%s)</string>
+    <string name="chart_height_label">Height (%s)</string>
+    <string name="chart_empty_state">No measurements to chart yet.\nAdd your first measurement from the dashboard!</string>
+
+    <!-- Chart Marker -->
+    <string name="chart_marker_date">%s</string>
+    <string name="chart_marker_weight">Weight: %s</string>
+    <string name="chart_marker_height">Height: %s</string>
+
+    <!-- ================================================================ -->
+    <!-- ===== PHASE 2 — MEASUREMENT HISTORY ===== -->
+    <!-- ================================================================ -->
+
+    <string name="measurement_history_title">Measurement History</string>
+    <string name="history_empty_state">No measurements recorded yet.\nStart tracking from the dashboard!</string>
+    <string name="msg_record_deleted">Measurement deleted</string>
+    <string name="action_undo">UNDO</string>
+    <string name="menu_export">Export CSV</string>
+
+    <!-- ================================================================ -->
+    <!-- ===== PHASE 2 — CSV EXPORT ===== -->
+    <!-- ================================================================ -->
+
+    <string name="export_share_title">Share Growth Records</string>
+    <string name="export_no_data">No data to export</string>
+    <string name="export_success">Growth data exported successfully!</string>
+
+    <!-- ===== CONTENT DESCRIPTIONS (Phase 2) ===== -->
+    <string name="cd_add_measurement">Add new measurement</string>
+    <string name="cd_weight_icon">Weight icon</string>
+    <string name="cd_height_icon">Height icon</string>
+    <string name="cd_head_icon">Head circumference icon</string>
+    <string name="cd_chart_icon">Growth chart icon</string>
+    <string name="cd_history_icon">Measurement history icon</string>
+    <string name="cd_export_icon">Export data icon</string>
+    <string name="cd_bmi_icon">BMI indicator icon</string>
+    <string name="cd_growth_up">Growth increase</string>
+    <string name="cd_growth_down">Growth decrease</string>
+    <string name="cd_navigate_back">Navigate back</string>
+    <string name="cd_note_icon">Notes icon</string>
+
+    <!-- ==============================================
+         PHASE 3: VACCINATION REMINDERS
+         ============================================== -->
+
+    <!-- ── Vaccine Schedule Screen ── -->
+    <string name="vaccine_schedule_title">Vaccination Schedule</string>
+    <string name="vaccine_schedule_subtitle">India National Immunization Schedule</string>
+    <string name="vaccine_progress_text">%1$d of %2$d vaccines given</string>
+    <string name="vaccine_progress_complete">All vaccines completed! 🎉</string>
+
+    <!-- ── Vaccine Status Labels ── -->
+    <string name="status_given">Given</string>
+    <string name="status_due">Due Soon</string>
+    <string name="status_overdue">Overdue</string>
+    <string name="status_upcoming">Upcoming</string>
+
+    <!-- ── Vaccine Due Date Labels ── -->
+    <string name="vaccine_due_today">Due today</string>
+    <string name="vaccine_due_tomorrow">Due tomorrow</string>
+    <string name="vaccine_due_in_days">Due in %1$d days</string>
+    <string name="vaccine_overdue_days">%1$d days overdue</string>
+    <string name="vaccine_given_on">Given on %1$s</string>
+    <string name="vaccine_due_on">Due: %1$s</string>
+
+    <!-- ── Vaccine Detail Bottom Sheet ── -->
+    <string name="vaccine_detail_title">Vaccine Details</string>
+    <string name="vaccine_detail_section_about">About This Vaccine</string>
+    <string name="vaccine_detail_section_schedule">Schedule</string>
+    <string name="vaccine_detail_recommended_age">Recommended Age: %1$s</string>
+    <string name="vaccine_detail_due_date">Due Date: %1$s</string>
+    <string name="vaccine_detail_protects">Protects Against</string>
+    <string name="hint_vaccine_notes">Notes (e.g., doctor name, hospital)</string>
+    <string name="hint_date_given">Date Given</string>
+    <string name="button_mark_given">Mark as Given</string>
+    <string name="button_mark_not_given">Mark as Not Given</string>
+    <string name="msg_vaccine_marked_given">%1$s marked as given ✅</string>
+    <string name="msg_vaccine_unmarked">%1$s unmarked</string>
+
+    <!-- ── Vaccine Empty / Info States ── -->
+    <string name="vaccine_empty_state">No vaccines found.\nContact support if this issue persists.</string>
+    <string name="vaccine_all_caught_up">All caught up! No vaccines due right now.</string>
+
+    <!-- ── Dashboard Vaccine Card ── -->
+    <string name="card_upcoming_vaccines">Upcoming Vaccines</string>
+    <string name="button_view_schedule">View Full Schedule</string>
+    <string name="button_vaccines">Vaccines</string>
+    <string name="dashboard_overdue_count">%1$d overdue</string>
+    <string name="dashboard_no_upcoming">No upcoming vaccines 🎉</string>
+
+    <!-- ── Notifications ── -->
+    <string name="notification_channel_name">Vaccine Reminders</string>
+    <string name="notification_channel_description">Reminders for upcoming vaccinations</string>
+    <string name="notification_vaccine_title">💉 Vaccine Reminder</string>
+    <string name="notification_vaccine_due_tomorrow">%1$s is due tomorrow for %2$s!</string>
+    <string name="notification_vaccine_due_today">%1$s is due today for %2$s!</string>
+    <string name="notification_vaccine_overdue">%1$s is overdue for %2$s. Please consult your pediatrician.</string>
+    <string name="notification_multiple_due">%1$d vaccines are due soon for %2$s</string>
+
+    <!-- ── Content Descriptions (Phase 3) ── -->
+    <string name="cd_vaccine_icon">Vaccine icon</string>
+    <string name="cd_vaccine_status">Vaccine status</string>
+    <string name="cd_vaccine_check">Vaccine given checkmark</string>
+    <string name="cd_vaccine_warning">Vaccine due soon</string>
+
+    <!-- ==============================================
+         PHASE 4: POLISH & SCALE
+         ============================================== -->
+
+    <!-- ── Edit Profile ── -->
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="edit_profile_subtitle">Update your baby\'s information</string>
+    <string name="edit_profile_form_subtitle">Keep this information up to date</string>
+    <string name="button_save_changes">Save Changes</string>
+    <string name="menu_edit_profile">Edit Profile</string>
+    <string name="msg_profile_updated">Profile updated successfully! ✅</string>
+
+    <!-- ── Multiple Babies ── -->
+    <string name="menu_add_baby">Add New Baby</string>
+    <string name="cd_switch_profile">Switch profile</string>
+    <string name="title_manage_profiles">Manage Profiles</string>
+    <string name="menu_profiles">Profiles</string>
+    <string name="msg_profile_deleted">Profile deleted successfully</string>
+    <string name="dialog_delete_title">Delete Profile?</string>
+    <string name="dialog_delete_message">Are you sure you want to delete this profile? This will erase all growth measurements and vaccine records permanently.</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_cancel">Cancel</string>
+
+    <!-- ── JSON Backup & Restore ── -->
+    <string name="dialog_export_title">Export Data</string>
+    <string name="export_option_csv">Export CSV (Growth Data)</string>
+    <string name="export_option_json">Export Full Backup (JSON)</string>
+    <string name="import_option_json">Restore Backup (JSON)</string>
+    <string name="msg_backup_success">Backup restored successfully!</string>
+    <string name="msg_backup_error">Failed to restore backup</string>
+
+    <!-- ── Dark Mode ── -->
+    <string name="menu_dark_mode">Toggle Dark Mode</string>
+
+</resources>
+

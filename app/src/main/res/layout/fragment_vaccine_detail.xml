@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- fragment_vaccine_detail.xml — Bottom Sheet for Vaccine Details -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet"
+    android:padding="24dp">
+
+    <!-- Bottom Sheet Drag Handle -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/chart_grid"
+        android:layout_marginBottom="24dp" />
+
+    <!-- HEADER: Name + Badge -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textVaccineName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/badgeStatus"
+            android:layout_marginEnd="16dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            tools:text="OPV-1" />
+
+        <TextView
+            android:id="@+id/badgeStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            tools:text="Due Soon"
+            tools:textColor="@color/vaccine_due"
+            tools:background="@color/vaccine_due_bg" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="4dp"
+        tools:text="Oral Polio Vaccine" />
+
+    <!-- SECTION: Details -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vaccine_detail_section_about"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_rose"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="4sp"
+        tools:text="Protects against Polio..." />
+
+    <!-- SECTION: Schedule -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vaccine_detail_section_schedule"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_rose"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/textAgeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="8dp"
+        tools:text="Recommended Age: 6 Weeks" />
+
+    <TextView
+        android:id="@+id/textDueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="4dp"
+        tools:text="Due Date: 15 Apr 2025" />
+
+    <TextView
+        android:id="@+id/textDateGiven"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/vaccine_given"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        tools:text="Given on: 15 Apr 2025" />
+
+    <!-- SECTION: Input Area (Date Picker & Notes) -->
+    <LinearLayout
+        android:id="@+id/layoutInputArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_date_given"
+            app:startIconDrawable="@drawable/ic_schedule"
+            app:startIconTint="@color/primary_rose"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/hint_vaccine_notes"
+            app:startIconDrawable="@drawable/ic_note"
+            app:startIconTint="@color/primary_rose"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:maxLength="100" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <!-- ACTION BUTTON -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAction"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/button_mark_given"
+        app:cornerRadius="28dp"
+        app:backgroundTint="@color/primary_rose"
+        android:textSize="16sp" />
+
+</LinearLayout>

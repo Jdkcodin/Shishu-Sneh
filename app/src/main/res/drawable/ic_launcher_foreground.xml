@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ic_launcher_foreground.xml — App launcher icon foreground
+     A heart shape representing the app's mission of maternal care -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M54,83.35l-5.8,-5.28C32.6,63.44 22,53.12 22,40.5c0,-10.32 8.16,-18.5 18.5,-18.5 5.76,0 11.29,2.69 14.5,6.93 3.21,-4.24 8.74,-6.93 14.5,-6.93C79.84,22 88,30.18 88,40.5c0,12.62 -10.6,22.94 -26.2,37.58L54,83.35z" />
+</vector>

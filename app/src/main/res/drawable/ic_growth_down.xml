@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ic_growth_down.xml — Arrow down icon indicating negative growth -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@color/growth_negative"
+        android:pathData="M7,10L12,15L17,10H7Z"/>
+</vector>

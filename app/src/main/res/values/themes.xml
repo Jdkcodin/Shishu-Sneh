@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    themes.xml — App Theme Configuration
+
+    We're using Material3 (Material You) as our base theme.
+    Theme.Material3.Light.NoActionBar = Light theme, no default toolbar
+    (We'll manage our own toolbar/headers in layouts)
+-->
+<resources>
+
+    <style name="Theme.ShishuSneh" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Primary color — Rose (used for buttons, active states) -->
+        <item name="colorPrimary">@color/primary_rose</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Primary Container — Light rose (used for filled backgrounds) -->
+        <item name="colorPrimaryContainer">@color/primary_rose_light</item>
+        <item name="colorOnPrimaryContainer">@color/primary_rose_dark</item>
+
+        <!-- Secondary — Lavender (used for less prominent elements) -->
+        <item name="colorSecondary">@color/secondary_lavender</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorSecondaryContainer">@color/secondary_lavender_light</item>
+
+        <!-- Tertiary — Peach (used for accents and highlights) -->
+        <item name="colorTertiary">@color/tertiary_peach</item>
+        <item name="colorTertiaryContainer">@color/tertiary_peach_light</item>
+
+        <!-- Background — Soft pink for the whole app -->
+        <item name="android:colorBackground">@color/background_soft_pink</item>
+        <item name="colorSurface">@color/card_white</item>
+
+        <!-- Status bar — Darker rose at the top of the screen -->
+        <item name="android:statusBarColor">@color/status_bar</item>
+
+    </style>
+
+    <!-- Phase 4: Android 12+ Splash Screen Theme -->
+    <style name="Theme.ShishuSneh.Splash" parent="Theme.SplashScreen">
+        <!-- Splash screen background color -->
+        <item name="windowSplashScreenBackground">@color/background_soft_pink</item>
+        <!-- Splash screen icon (must be a vector or animated vector) -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_heart_animated</item>
+        <!-- Theme to switch to after splash screen -->
+        <item name="postSplashScreenTheme">@style/Theme.ShishuSneh</item>
+    </style>
+
+</resources>

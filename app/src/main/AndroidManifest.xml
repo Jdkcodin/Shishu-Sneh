@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AndroidManifest.xml — The App's "ID Card" (Phase 2)
+
+    Every Android app MUST have this file. It tells the system:
+    - What's the app's package name?
+    - Which Activities (screens) exist?
+    - Which Activity opens first (LAUNCHER)?
+    - What permissions does the app need?
+    - Which Application class to use?
+
+    PHASE 2 CHANGES:
+    - Removed old MainActivity (replaced by DashboardActivity)
+    - Added DashboardActivity
+    - Added AddMeasurementActivity
+    - Added GrowthChartActivity
+    - Added MeasurementHistoryActivity
+    - Added FileProvider for CSV sharing
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Phase 3 permissions for Notifications and WorkManager -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".ShishuSnehApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShishuSneh"
+        tools:targetApi="34">
+
+        <!--
+            OnboardingActivity — LAUNCHER ACTIVITY
+            This is the first screen that opens when the user taps the app icon.
+
+            <intent-filter> tells Android: "This is the entry point"
+            - action.MAIN = This is the main entry point
+            - category.LAUNCHER = Show this in the app launcher
+        -->
+        <activity
+            android:name=".ui.onboarding.OnboardingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ShishuSneh.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            DashboardActivity — Main screen after onboarding (Phase 2)
+            Shows profile, growth chart, BMI, measurements, export
+        -->
+        <activity
+            android:name=".ui.dashboard.DashboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.profile.ManageProfilesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!--
+            EditProfileActivity — Phase 4
+        -->
+        <activity
+            android:name=".ui.profile.EditProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!--
+            AddMeasurementActivity — Form to record new growth measurement
+        -->
+        <activity
+            android:name=".ui.growth.AddMeasurementActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!--
+            GrowthChartActivity — Full-screen growth chart visualization
+        -->
+        <activity
+            android:name=".ui.growth.GrowthChartActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!--
+            MeasurementHistoryActivity — Browse all past measurements
+        -->
+        <activity
+            android:name=".ui.growth.MeasurementHistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!--
+            VaccineScheduleActivity — Full vaccination schedule (Phase 3)
+        -->
+        <activity
+            android:name=".ui.vaccine.VaccineScheduleActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!--
+            FileProvider — Required for sharing CSV files via Share Sheet
+            
+            In Android 7.0+, you can't share file:// URIs directly.
+            FileProvider creates content:// URIs that other apps can access.
+            
+            @xml/file_paths defines which directories are shareable.
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

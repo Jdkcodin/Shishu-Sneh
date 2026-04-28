@@ -1,0 +1,78 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <!-- The underlying vector drawable -->
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="192dp"
+            android:height="192dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <!-- A group to apply scaling to -->
+            <group
+                android:name="heart_group"
+                android:pivotX="12"
+                android:pivotY="12">
+                <path
+                    android:fillColor="@color/primary_rose"
+                    android:pathData="M12,21.35l-1.45,-1.32C5.4,15.36 2,12.28 2,8.5 2,5.42 4.42,3 7.5,3c1.74,0 3.41,0.81 4.5,2.09C13.09,3.81 14.76,3 16.5,3 19.58,3 22,5.42 22,8.5c0,3.78 -3.4,6.86 -8.55,11.54L12,21.35z"/>
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <!-- Animation to scale down and then up (heartbeat) -->
+    <target android:name="heart_group">
+        <aapt:attr name="android:animation">
+            <set>
+                <!-- Scale X down -->
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:valueFrom="1.0"
+                    android:valueTo="0.8"
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/fast_out_slow_in" />
+                <!-- Scale Y down -->
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:valueFrom="1.0"
+                    android:valueTo="0.8"
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/fast_out_slow_in" />
+                
+                <!-- Scale X up -->
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:valueFrom="0.8"
+                    android:valueTo="1.1"
+                    android:startOffset="400"
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/fast_out_slow_in" />
+                <!-- Scale Y up -->
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:valueFrom="0.8"
+                    android:valueTo="1.1"
+                    android:startOffset="400"
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/fast_out_slow_in" />
+                    
+                <!-- Back to normal -->
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:valueFrom="1.1"
+                    android:valueTo="1.0"
+                    android:startOffset="800"
+                    android:duration="200"
+                    android:interpolator="@android:interpolator/linear" />
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:valueFrom="1.1"
+                    android:valueTo="1.0"
+                    android:startOffset="800"
+                    android:duration="200"
+                    android:interpolator="@android:interpolator/linear" />
+            </set>
+        </aapt:attr>
+    </target>
+
+</animated-vector>

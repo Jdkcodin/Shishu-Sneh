@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    file_paths.xml — FileProvider Configuration
+
+    Defines which directories the FileProvider can share files from.
+    Required for CSV export via Android's Share Sheet.
+
+    The exports/ directory inside cache is used for temporary CSV files.
+-->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shares files from the cache/exports/ directory -->
+    <cache-path
+        name="exports"
+        path="exports/" />
+</paths>

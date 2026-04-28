@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand Colors (Darker for dark mode to ensure white text legibility on buttons) -->
+    <color name="primary_rose">#8A4E5C</color>
+    <color name="primary_rose_dark">#683542</color>
+    <color name="primary_rose_light">#402B30</color>
+    
+    <!-- Secondary Brand Color -->
+    <color name="secondary_lavender">#CBAACB</color>
+
+    <!-- Backgrounds (Deep slate/purple tint instead of harsh black) -->
+    <color name="background_soft_pink">#1A1018</color>
+    <color name="card_white">#2C1F2A</color>
+
+    <!-- Card Backgrounds for Dashboard Buttons -->
+    <color name="secondary_lavender_light">#3A2A3F</color>
+    <color name="tertiary_peach_light">#3E2723</color>
+    <color name="vaccine_upcoming_bg">#183247</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#F0E0F0</color>
+    <color name="text_secondary">#BBA9C0</color>
+    <color name="text_hint">#7A6A80</color>
+
+    <!-- System -->
+    <color name="status_bar">#0D0810</color>
+
+    <!-- Chart Colors -->
+    <color name="chart_grid">#3D2B3A</color>
+    <color name="chart_label">#AA88AA</color>
+    <color name="chart_line">@color/primary_rose</color>
+    <color name="chart_fill">@color/primary_rose_light</color>
+
+    <!-- Chart Colors - BMI Status -->
+    <color name="bmi_underweight">#6699CC</color>
+    <color name="bmi_normal">#88CC88</color>
+    <color name="bmi_overweight">#EEDD88</color>
+    <color name="bmi_obese">#DD8888</color>
+</resources>

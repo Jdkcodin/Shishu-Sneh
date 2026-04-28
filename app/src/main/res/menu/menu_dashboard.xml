@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- menu_dashboard.xml — Toolbar overflow menu for the Dashboard -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Toggle between Metric and Imperial units -->
+    <item
+        android:id="@+id/menu_toggle_units"
+        android:title="@string/menu_imperial"
+        app:showAsAction="never" />
+
+    <!-- Manage Profiles -->
+    <item
+        android:id="@+id/menu_profiles"
+        android:title="@string/menu_profiles"
+        android:icon="@drawable/ic_profiles"
+        app:showAsAction="ifRoom" />
+
+    <!-- Dark Mode Toggle -->
+    <item
+        android:id="@+id/menu_dark_mode"
+        android:title="@string/menu_dark_mode"
+        android:icon="@drawable/ic_dark_mode"
+        app:showAsAction="ifRoom" />
+
+</menu>

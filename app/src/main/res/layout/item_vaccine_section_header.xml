@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    item_vaccine_section_header.xml — Age Group Header
+    Shows up in the RecyclerView before each group of vaccines (e.g., "6 Weeks")
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="8dp"
+    android:background="@color/vaccine_section_bg">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_schedule"
+        android:contentDescription="@null"
+        android:tint="@color/primary_rose"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/textAgeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_rose_dark"
+        android:textAllCaps="true" />
+</LinearLayout>

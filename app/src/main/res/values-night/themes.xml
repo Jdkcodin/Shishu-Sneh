@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Phase 4: Dark Mode Splash Screen Theme -->
+    <style name="Theme.ShishuSneh.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/background_soft_pink</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_baby_welcome</item>
+        <item name="postSplashScreenTheme">@style/Theme.ShishuSneh</item>
+    </style>
+</resources>
