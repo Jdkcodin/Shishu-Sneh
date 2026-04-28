@@ -36,7 +36,7 @@ To build and run this project locally:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/Shishu-sneh.git
+    git clone https://github.com/Jdkcodin/Shishu-sneh.git
     ```
 2.  **Open the project** in Android Studio (Giraffe or newer recommended).
 3.  **Sync Gradle** to download all dependencies.
